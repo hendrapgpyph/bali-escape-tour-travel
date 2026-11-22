@@ -1,0 +1,348 @@
+[
+  {
+    "id": "nusa-penida",
+    "categoryId": "full-day",
+    "slug": "nusa-penida-tour",
+    "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=90",
+    "title": {
+      "en": "Nusa Penida Tour",
+      "id": "Tur Nusa Penida"
+    },
+    "shortDescription": {
+      "en": "Explore dramatic cliffs, turquoise coves and island life.",
+      "id": "Jelajahi tebing dramatis, teluk biru, dan kehidupan pulau."
+    },
+    "content": {
+      "en": "<p>Escape to a wild and beautiful island just off Bali’s coast. Spend the day discovering iconic viewpoints, quiet coves and the clear waters of Nusa Penida.</p><h2>An island made for exploring</h2><p>Our local team takes care of the details, so you can enjoy the scenery at your own pace.</p><ul><li>Private island transport</li><li>Local driver and guide</li><li>Time to swim and take it all in</li></ul>",
+      "id": "<p>Jelajahi pulau yang indah di lepas pantai Bali. Nikmati pemandangan ikonis, teluk yang tenang, dan air jernih Nusa Penida.</p><h2>Pulau untuk dijelajahi</h2><p>Tim lokal kami mengurus semuanya agar Anda dapat menikmati pemandangan dengan santai.</p><ul><li>Transportasi privat di pulau</li><li>Pengemudi dan pemandu lokal</li><li>Waktu untuk berenang dan bersantai</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Fast Boat Transfer & Harbor Pickup",
+          "id": "Penyeberangan Fast Boat & Penjemputan Pelabuhan"
+        },
+        "description": {
+          "en": "Depart from Sanur harbor on a fast boat crossing the sea to Nusa Penida, welcomed directly by your friendly private driver.",
+          "id": "Berangkat dari pelabuhan Sanur menyeberangi selat menuju Nusa Penida dan disambut langsung oleh sopir privat lokal kami."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Kelingking Beach & T-Rex Cliff Viewpoint",
+          "id": "Pantai Kelingking & Pemandangan Tebing T-Rex"
+        },
+        "description": {
+          "en": "Witness the world-famous cliff formation shaped like a dinosaur, towering over powdery white sands and brilliant turquoise waters.",
+          "id": "Menyaksikan tebing ikonis berbentuk T-Rex yang menjulang megah di atas pasir putih dan hamparan air laut biru toska."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Broken Beach & Angel's Billabong",
+          "id": "Broken Beach & Kolam Alami Angel's Billabong"
+        },
+        "description": {
+          "en": "Marvel at a giant circular limestone bridge where ocean waves roll in, and see the natural crystal-clear tidal infinity pool.",
+          "id": "Kagumi jembatan tebing kapur melingkar tempat ombak samudra masuk, serta kolam pasang surut alami dengan air sebening kristal."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Crystal Bay Beach Relaxation",
+          "id": "Santai di Pantai Crystal Bay"
+        },
+        "description": {
+          "en": "Relax on a tranquil palm-fringed bay, soak in the afternoon island sun, or take a refreshing swim before the return boat trip.",
+          "id": "Bersantai di pantai teduh berderet pohon kelapa, menikmati angin sejuk pulau atau berenang segar sebelum kembali ke Bali."
+        }
+      }
+    ]
+  },
+  {
+    "id": "kintamani",
+    "categoryId": "full-day",
+    "slug": "kintamani-tour",
+    "thumbnail": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=85",
+    "title": {
+      "en": "Kintamani Tour",
+      "id": "Tur Kintamani"
+    },
+    "shortDescription": {
+      "en": "Volcanic views, cool mountain air and a taste of Bali.",
+      "id": "Pemandangan gunung berapi, udara sejuk, dan cita rasa Bali."
+    },
+    "content": {
+      "en": "<p>Travel into Bali’s green highlands for a refreshing day among volcanic landscapes, ancient temples, and local artisan culture.</p><h2>The refreshing highlands</h2><p>Breathe in the cool mountain breeze while taking in majestic panoramic views across Mount Batur and its crater lake.</p><ul><li>Private air-conditioned car & driver</li><li>Scenic caldera viewpoint</li><li>Coffee tasting and temple visits</li></ul>",
+      "id": "<p>Jelajahi dataran tinggi Bali yang hijau untuk menikmati lanskap vulkanik, pura bersejarah, dan budaya lokal yang kaya.</p><h2>Kesejukan dataran tinggi</h2><p>Hirup udara segar pegunungan sambil menikmati pemandangan spektakuler Gunung Batur dan danau kalderanya.</p><ul><li>Mobil ber-AC privat & sopir berpengalaman</li><li>Titik pandang kaldera terbaik</li><li>Mencicipi kopi dan kunjungan pura</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Mount Batur Panorama & Lake Caldera",
+          "id": "Panorama Gunung Batur & Danau Kaldera"
+        },
+        "description": {
+          "en": "Take in sweeping 180-degree vistas of the majestic active volcano and glistening Lake Batur from the edge of Kintamani ridge.",
+          "id": "Menikmati panorama 180 derajat Gunung Batur yang megah dan kilauan Danau Batur dari ketinggian perbukitan Kintamani."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Organic Coffee Plantation & Tasting",
+          "id": "Perkebunan Kopi & Mencicipi Teh Herbal"
+        },
+        "description": {
+          "en": "Stroll through lush agro-tourism gardens, learn traditional roasting methods, and sample aromatic Balinese coffees and spiced teas.",
+          "id": "Menyusuri kebun agrowisata yang asri, melihat proses sangrai tradisional, dan mencicipi aneka kopi serta teh rempah khas Bali."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Tirta Empul Holy Water Spring Temple",
+          "id": "Pura Tirta Empul & Mata Air Suci"
+        },
+        "description": {
+          "en": "Discover a sacred 10th-century water temple fed by natural bubbling mountain springs, famous for its serene spiritual cleansing pools.",
+          "id": "Mengunjungi pura bersejarah abad ke-10 dengan mata air alami pegunungan yang jernih, terkenal dengan kolam penyucian spiritualnya."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ubud",
+    "categoryId": "full-day",
+    "slug": "ubud-tour",
+    "thumbnail": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1800&q=85",
+    "title": {
+      "en": "Ubud Tour",
+      "id": "Tur Ubud"
+    },
+    "shortDescription": {
+      "en": "Experience the serene side of Bali among temples and rice fields.",
+      "id": "Nikmati sisi tenang Bali di antara pura dan sawah."
+    },
+    "content": {
+      "en": "<p>Discover Ubud’s rich artistic heritage, emerald rice terraces, and tranquil spiritual hideaways with a knowledgeable local guide.</p><h2>The cultural heart of Bali</h2><p>Ubud blends peaceful natural scenery with inspiring art galleries, royal architecture, and sacred forests.</p><ul><li>Private hotel pickup and drop-off</li><li>Personal local driver & guide</li><li>Flexible stops and photography time</li></ul>",
+      "id": "<p>Jelajahi kekayaan seni Ubud, hamparan sawah bertingkat, dan tempat peristirahatan spiritual bersama pemandu lokal.</p><h2>Jantung budaya Bali</h2><p>Ubud memadukan ketenangan alam pedesaan dengan galeri seni, arsitektur istana, dan hutan suci yang teduh.</p><ul><li>Penjemputan dan pengantaran privat di hotel</li><li>Sopir & pemandu lokal berpengalaman</li><li>Waktu kunjungan santai dan fleksibel</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Sacred Monkey Forest Sanctuary",
+          "id": "Hutan Suci Sacred Monkey Forest"
+        },
+        "description": {
+          "en": "Walk under ancient banyan trees among sacred temple ruins and encounter friendly Balinese long-tailed monkeys in their natural habitat.",
+          "id": "Menyusuri jalan setapak di bawah pohon beringin kuno, candi bersejarah, dan berinteraksi dengan monyet ekor panjang yang ramah."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Tegalalang Rice Terraces",
+          "id": "Undakan Sawah Terasering Tegalalang"
+        },
+        "description": {
+          "en": "Admire the iconic sculpted green hillside paddies built with the ancient Subak irrigation system, surrounded by coconut palms.",
+          "id": "Mengagumi keindahan undakan sawah hijau menakjubkan dengan sistem irigasi tradisional Subak yang diakui dunia."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Ubud Royal Palace & Traditional Art Market",
+          "id": "Puri Saren Agung & Pasar Seni Ubud"
+        },
+        "description": {
+          "en": "Step into historical royal courtyards and browse vibrant market stalls filled with handmade silk scarves, woodcarvings, and handicrafts.",
+          "id": "Melihat kemegahan istana kerajaan Ubud dan berburu suvenir kerajinan tangan, tenun sutra, serta ukiran kayu khas seniman lokal."
+        }
+      }
+    ]
+  },
+  {
+    "id": "atv",
+    "categoryId": "activity",
+    "slug": "atv-adventure",
+    "thumbnail": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1800&q=85",
+    "title": {
+      "en": "ATV Adventure",
+      "id": "Petualangan ATV"
+    },
+    "shortDescription": {
+      "en": "Take the scenic route through jungle trails and village lanes.",
+      "id": "Susuri jalur hutan dan jalan desa yang indah."
+    },
+    "content": {
+      "en": "<p>Ride through Bali’s backroads on a guided ATV quad bike adventure through bamboo forests, muddy trails, river streams, and dark tunnels.</p><h2>Off-road excitement</h2><p>Designed for both beginners and experienced riders, with professional instructors and full safety gear provided.</p><ul><li>All-terrain quad bike (single or tandem)</li><li>Safety gear: helmet and gumboots</li><li>Shower facilities and Indonesian lunch</li></ul>",
+      "id": "<p>Kendarai quad bike ATV menembus jalur tersembunyi Bali melintasi hutan bambu, lintasan lumpur, aliran sungai, dan terowongan gua.</p><h2>Keseruan off-road</h2><p>Cocok untuk pemula maupun yang berpengalaman, lengkap dengan instruktur profesional dan perlengkapan keamanan berstandar internasional.</p><ul><li>Unit quad bike bertenaga (single atau tandem)</li><li>Perlengkapan aman: helm & sepatu boots</li><li>Fasilitas shower dan makan siang prasmanan</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Safety Briefing & Equipment Fitting",
+          "id": "Briefing Keamanan & Persiapan Perlengkapan"
+        },
+        "description": {
+          "en": "Meet your instructor, get fitted with safety helmets and boots, and complete a brief test-track trial to get familiar with controls.",
+          "id": "Bertemu instruktur berpengalaman, memakai helm serta sepatu pelindung, dan latihan singkat mengemudikan ATV di arena latihan."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Jungle Trails, Mud Tracks & Rice Fields",
+          "id": "Lintasan Hutan, Kubangan Lumpur & Sawah"
+        },
+        "description": {
+          "en": "Conquer adrenaline-pumping dirt trails, deep mud splash zones, quiet bamboo groves, and open village rice paddy landscapes.",
+          "id": "Menaklukkan rute off-road seru penuh kubangan lumpur menantang, rimbunnya hutan bambu, dan jalan pedesaan yang asri."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Cave Tunnel Ride & River Rapids Crossing",
+          "id": "Lintasan Terowongan Gua & Menyeberang Sungai"
+        },
+        "description": {
+          "en": "Ride right through a dark carved rock tunnel and splash through rocky shallow river beds before returning for hot showers and lunch.",
+          "id": "Menerobos terowongan gua batu yang spektakuler dan membelah aliran air sungai berbatu sebelum mandi hangat dan makan siang."
+        }
+      }
+    ]
+  },
+  {
+    "id": "rafting",
+    "categoryId": "activity",
+    "slug": "rafting-adventure",
+    "thumbnail": "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1800&q=85",
+    "title": {
+      "en": "Rafting Adventure",
+      "id": "Petualangan Arung Jeram"
+    },
+    "shortDescription": {
+      "en": "Paddle through lush river valleys and tropical scenery.",
+      "id": "Mengarungi lembah hijau dan pemandangan tropis."
+    },
+    "content": {
+      "en": "<p>Share a memorable white-water river journey down the pristine Ayung River valley with expert river guides and breathtaking rainforest views.</p><h2>Adrenaline in nature</h2><p>Tackle exciting Class II & III rapids past secret waterfalls, dramatic stone cliffs, and dense tropical foliage.</p><ul><li>12 km scenic river rafting course</li><li>Certified professional river guide in every boat</li><li>Complete safety gear, shower and buffet lunch</li></ul>",
+      "id": "<p>Nikmati petualangan arung jeram seru menyusuri Sungai Ayung yang asri bersama instruktur profesional dan panorama lembah tropis.</p><h2>Sensasi alam yang memukau</h2><p>Taklukkan jeram tingkat II & III melewati air terjun tersembunyi, tebing berukir relief Ramayana, dan pepohonan hijau nan rimbun.</p><ul><li>Jalur arung jeram sepanjang 12 km</li><li>Pemandu berlisensi di setiap perahu karet</li><li>Peralatan lengkap, ruang bilas hangat & makan siang</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "River Safety Briefing & Equipment",
+          "id": "Pengarahan Keamanan & Pemakaian Pelampung"
+        },
+        "description": {
+          "en": "Put on life jackets and lightweight helmets, receive paddle instructions, and descend into the spectacular Ayung river valley.",
+          "id": "Mengenakan pelampung dan helm keselamatan, mendapat panduan mendayung dari instruktur, dan turun menuju bibir lembah Sungai Ayung."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "12km River Rapids & Natural Waterfalls",
+          "id": "12 KM Jeram Sungai & Air Terjun Alami"
+        },
+        "description": {
+          "en": "Navigate thrilling rapids, stop by a cascading natural waterfall for photos, and admire ancient carved cliff reliefs along the route.",
+          "id": "Mengarungi jeram seru selama kurang lebih 2 jam, berfoto di air terjun alami, dan menikmati relief pahatan artistik di tebing sungai."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Hot Showers & Buffet Lunch with Valley View",
+          "id": "Bilas Hangat & Makan Siang Pemandangan Ngarai"
+        },
+        "description": {
+          "en": "Freshen up in clean modern shower facilities, then savor a generous buffet spread of local Balinese dishes overlooking the valley.",
+          "id": "Membersihkan diri di ruang shower yang nyaman, lalu menikmati hidangan prasmanan lezat sambil menikmati suasana lembah yang tenang."
+        }
+      }
+    ]
+  },
+  {
+    "id": "discovery",
+    "categoryId": "multi-day",
+    "slug": "bali-discovery",
+    "thumbnail": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85",
+    "banner": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1800&q=85",
+    "title": {
+      "en": "Bali Discovery",
+      "id": "Jelajah Bali"
+    },
+    "shortDescription": {
+      "en": "Four days to discover the island’s varied landscapes and culture.",
+      "id": "Empat hari menjelajahi lanskap dan budaya Bali."
+    },
+    "content": {
+      "en": "<p>A considered multi-day journey from lively southern coastlines to cool northern highlands and sacred temple valleys.</p><h2>The complete Bali experience</h2><p>Leave every detail to our dedicated team so you can immerse yourself in the culture, flavors, and wonders of the Island of the Gods.</p><ul><li>4 days / 3 nights fully private curated itinerary</li><li>Dedicated private vehicle and personal driver throughout</li><li>Includes airport pickup, all entrance fees, and boat tickets</li></ul>",
+      "id": "<p>Perjalanan beberapa hari menjelajahi pesisir selatan yang memikat hingga dataran tinggi utara yang sejuk dan pura bersejarah.</p><h2>Pengalaman terlengkap di Bali</h2><p>Serahkan seluruh perencanaan kepada tim kami agar Anda dapat menikmati keindahan alam, budaya, dan kuliner Pulau Dewata dengan nyaman.</p><ul><li>Paket lengkap 4 hari / 3 malam privat terkurasi</li><li>Kendaraan privat & sopir berdedikasi sepanjang perjalanan</li><li>Termasuk penjemputan bandara, tiket masuk wisata, dan fast boat</li></ul>"
+    },
+    "itinerary": [
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Day 1: Airport Welcome & Uluwatu Sunset Temple",
+          "id": "Hari 1: Penjemputan Bandara & Sunset Tebing Uluwatu"
+        },
+        "description": {
+          "en": "Warm VIP airport greeting, hotel check-in, and an unforgettable afternoon at Uluwatu Cliff Temple overlooking the Indian Ocean.",
+          "id": "Penyambutan privat di bandara, check-in hotel, dilanjutkan kunjungan ke Pura Uluwatu di atas tebing megah menghadap Samudra Hindia."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Day 2: Ubud Cultural Heritage & Tegalalang",
+          "id": "Hari 2: Pesona Budaya Ubud & Terasering Tegalalang"
+        },
+        "description": {
+          "en": "Explore Sacred Monkey Forest, iconic green terraced rice fields, holy springs at Tirta Empul, and Ubud art handicraft markets.",
+          "id": "Menjelajahi Monkey Forest, hamparan sawah bertingkat Tegalalang, mata air suci Tirta Empul, dan galeri seni kerajinan Ubud."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Day 3: Nusa Penida Island Hop Adventure",
+          "id": "Hari 3: Petualangan Menyeberang ke Nusa Penida"
+        },
+        "description": {
+          "en": "Full day island excursion by speed boat exploring Kelingking Beach, Broken Beach, and Angel's Billabong crystal tide pools.",
+          "id": "Eksplorasi seharian penuh naik fast boat ke Nusa Penida mengunjungi tebing Pantai Kelingking, Broken Beach, dan Angel's Billabong."
+        }
+      },
+      {
+        "thumbnail": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80",
+        "title": {
+          "en": "Day 4: Coffee Tasting, Souvenirs & Airport Farewell",
+          "id": "Hari 4: Mencicipi Kopi, Belanja Oleh-oleh & Pengantaran"
+        },
+        "description": {
+          "en": "Relaxed morning visit to local specialty coffee roasters and artisan souvenir stores, followed by private airport transfer for departure.",
+          "id": "Pagi santai mencicipi kopi Bali dan berbelanja oleh-oleh khas, diakhiri dengan pengantaran nyaman ke bandara untuk penerbangan pulang."
+        }
+      }
+    ]
+  }
+]
