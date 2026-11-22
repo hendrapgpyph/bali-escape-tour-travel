@@ -2008,6 +2008,15 @@ button {
   font-size: 12px;
 }
 
+.map-frame {
+  width: 100%;
+  min-height: 280px;
+  border: 1px solid #dbe8ec;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(16, 50, 68, 0.06);
+  display: block;
+}
+
 .contact-photo {
   min-height: 350px;
   background-size: cover;
