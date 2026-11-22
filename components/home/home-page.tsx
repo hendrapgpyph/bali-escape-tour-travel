@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ChevronDown, Clock3, Compass, HeartHandshake, MoveUpRight, Palmtree, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, Clock3, Compass, HeartHandshake, MoveUpRight, Palmtree, ShieldCheck, Sparkles, Star } from "lucide-react";
 import categories from "@/src/data/tour-categories.json";
 import cars from "@/src/data/cars.json";
 import pages from "@/src/data/pages.json";
@@ -56,10 +56,10 @@ export default function HomePage({ locale }: { locale: Locale }) {
           </h1>
           <p>{text(copy.heroDescription, locale)}</p>
           <div className="hero-cta-group">
-            <Link className="button button-orange" href={categoryHref(locale, categories[0].slug)}>
+            <a className="button button-orange" href="#tours">
               {text(copy.browse, locale)}
               <ArrowRight size={16} />
-            </Link>
+            </a>
             <a
               className="button button-glass"
               href={whatsappHref(locale === "en" ? "Hello! Let’s plan my custom Bali trip." : "Halo! Saya ingin merencanakan tur kustom di Bali.")}
@@ -212,6 +212,14 @@ export default function HomePage({ locale }: { locale: Locale }) {
               <div className="car-info">
                 <h3>{text(car.title, locale)}</h3>
                 <p>{text(car.description, locale)}</p>
+                <ul className="feature-list">
+                  {car.features.map((f) => (
+                    <li key={f.en}>
+                      <Check size={14} />
+                      {text(f, locale)}
+                    </li>
+                  ))}
+                </ul>
                 <div className="car-price">
                   <strong>{money(car.price)}</strong>
                   <span>/{locale === "en" ? "day (incl. driver)" : "hari (termasuk supir)"}</span>

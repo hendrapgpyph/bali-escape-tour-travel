@@ -1,6 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import sanitizeHtml from "sanitize-html";
-import { ArrowRight, ArrowUpRight, Check, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, MapPin, ZoomIn } from "lucide-react";
 import categories from "@/src/data/tour-categories.json";
 import tours from "@/src/data/tours.json";
 import cars from "@/src/data/cars.json";
@@ -10,6 +13,7 @@ import { SectionTitle } from "@/components/layout/site-shell";
 import { categoryHref, money, tourHref, whatsappHref } from "@/lib/site-utils";
 import { text, type Locale } from "@/lib/localization";
 import { LazyImage } from "@/components/ui/lazy-image";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 
 export function CategoryPage({ locale, slug }: { locale: Locale; slug: string }) {
   const category = categories.find((x) => x.slug === slug);
@@ -54,15 +58,28 @@ export function CategoryPage({ locale, slug }: { locale: Locale; slug: string })
             <Link className="tour-card" key={t.id} href={tourHref(locale, t.slug)}>
               <div className="tour-card-img-wrap">
                 <LazyImage src={t.thumbnail} alt={text(t.title, locale)} />
+                {t.price && (
+                  <span className="tour-price-badge">
+                    {money(t.price)}
+                    <small>/{t.priceUnit ? text(t.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</small>
+                  </span>
+                )}
               </div>
               <div className="tour-card-copy">
                 <span className="eyebrow">{text(category.title, locale)}</span>
                 <h3>{text(t.title, locale)}</h3>
                 <p>{text(t.shortDescription, locale)}</p>
-                <span className="text-link">
-                  {locale === "en" ? "Explore tour" : "Jelajahi tur"}
-                  <ArrowRight size={15} />
-                </span>
+                <div className="tour-card-footer">
+                  <div className="tour-price-info">
+                    <small>{locale === "en" ? "Starts from" : "Mulai dari"}</small>
+                    <strong>{money(t.price)}</strong>
+                    <span>/{t.priceUnit ? text(t.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</span>
+                  </div>
+                  <span className="text-link">
+                    {locale === "en" ? "Explore" : "Detail"}
+                    <ArrowRight size={15} />
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
@@ -73,6 +90,8 @@ export function CategoryPage({ locale, slug }: { locale: Locale; slug: string })
 }
 
 export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; title?: string; description?: string } | null>(null);
+
   const tour = tours.find((t) => t.slug === slug);
   if (!tour)
     return (
@@ -114,6 +133,13 @@ export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
           <span className="eyebrow">{text(category.title, locale)} · BALI</span>
           <h1>{text(tour.title, locale)}</h1>
           <p>{text(tour.shortDescription, locale)}</p>
+          {tour.price && (
+            <div className="detail-price-pill">
+              <span className="detail-price-from">{locale === "en" ? "Price from" : "Harga mulai"}</span>
+              <strong className="detail-price-val">{money(tour.price)}</strong>
+              <span className="detail-price-unit">/{tour.priceUnit ? text(tour.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</span>
+            </div>
+          )}
         </div>
       </div>
       <article className="article-layout">
@@ -129,9 +155,22 @@ export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
               </div>
               <div className="experience-grid">
                 {tour.itinerary.map((item, i) => (
-                  <div className="experience-card" key={i}>
+                  <div
+                    className="experience-card clickable"
+                    key={i}
+                    onClick={() =>
+                      setLightboxImage({
+                        src: item.thumbnail,
+                        title: text(item.title, locale),
+                        description: text(item.description, locale),
+                      })
+                    }
+                  >
                     <div className="experience-thumb">
                       <LazyImage src={item.thumbnail} alt={text(item.title, locale)} />
+                      <span className="experience-thumb-badge" title={locale === "en" ? "Click to view photo" : "Klik untuk perbesar"}>
+                        <ZoomIn size={14} />
+                      </span>
                     </div>
                     <div className="experience-body">
                       <h3>{text(item.title, locale)}</h3>
@@ -144,6 +183,19 @@ export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
           )}
         </div>
         <aside className="booking-card">
+          {tour.price && (
+            <div className="booking-price-header">
+              <span className="eyebrow">{locale === "en" ? "TOUR PRICING" : "HARGA PAKET TUR"}</span>
+              <div className="booking-main-price">
+                <strong>{money(tour.price)}</strong>
+                <span>/{tour.priceUnit ? text(tour.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</span>
+              </div>
+              <span className="booking-price-sub">
+                {locale === "en" ? "✓ All inclusive · Professional Guide" : "✓ All inclusive · Pemandu Ahli"}
+              </span>
+              <div className="booking-divider" />
+            </div>
+          )}
           <span className="eyebrow">BALI ESCAPE</span>
           <h3>{locale === "en" ? "Make this your Bali story" : "Jadikan ini kisah Bali Anda"}</h3>
           <p>{locale === "en" ? "Let’s find the right day for your island adventure." : "Mari tentukan hari yang tepat untuk petualangan Anda."}</p>
@@ -151,8 +203,8 @@ export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
             className="button button-orange full-button"
             href={whatsappHref(
               locale === "en"
-                ? `Hello, I’m interested in ${text(tour.title, locale)}. Could you provide more information?`
-                : `Halo, saya tertarik dengan ${text(tour.title, locale)}. Bisa berikan informasi lebih lanjut?`
+                ? `Hello, I’m interested in booking ${text(tour.title, locale)}${tour.price ? ` (${money(tour.price)}/${tour.priceUnit ? text(tour.priceUnit, locale) : "person"})` : ""}. Could you provide more details?`
+                : `Halo, saya tertarik memesan ${text(tour.title, locale)}${tour.price ? ` (${money(tour.price)}/${tour.priceUnit ? text(tour.priceUnit, locale) : "orang"})` : ""}. Bisa berikan detailnya?`
             )}
           >
             {locale === "en" ? "Book this tour" : "Pesan tur ini"}
@@ -174,20 +226,40 @@ export function TourPage({ locale, slug }: { locale: Locale; slug: string }) {
               <Link className="tour-card" key={t.id} href={tourHref(locale, t.slug)}>
                 <div className="tour-card-img-wrap">
                   <LazyImage src={t.thumbnail} alt={text(t.title, locale)} />
+                  {t.price && (
+                    <span className="tour-price-badge">
+                      {money(t.price)}
+                      <small>/{t.priceUnit ? text(t.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</small>
+                    </span>
+                  )}
                 </div>
                 <div className="tour-card-copy">
                   <h3>{text(t.title, locale)}</h3>
                   <p>{text(t.shortDescription, locale)}</p>
-                  <span className="text-link">
-                    {locale === "en" ? "Discover" : "Jelajahi"}
-                    <ArrowRight size={15} />
-                  </span>
+                  <div className="tour-card-footer">
+                    <div className="tour-price-info">
+                      <small>{locale === "en" ? "Starts from" : "Mulai dari"}</small>
+                      <strong>{money(t.price)}</strong>
+                      <span>/{t.priceUnit ? text(t.priceUnit, locale) : (locale === "en" ? "person" : "orang")}</span>
+                    </div>
+                    <span className="text-link">
+                      {locale === "en" ? "Discover" : "Jelajahi"}
+                      <ArrowRight size={15} />
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
         </section>
       )}
+
+      {/* Lightbox / Fancybox Modal */}
+      <ImageLightbox
+        isOpen={!!lightboxImage}
+        onClose={() => setLightboxImage(null)}
+        image={lightboxImage}
+      />
     </main>
   );
 }
@@ -199,7 +271,7 @@ export function CarRentalPage({ locale }: { locale: Locale }) {
         <span className="eyebrow">
           {locale === "en" ? "BALI PRIVATE CAR PRICELIST · ALL INCLUSIVE" : "PRICELIST MOBIL BALI · SUDAH TERMASUK SUPIR"}
         </span>
-        <h1>{locale === "en" ? "Car Fleet & Daily Pricelist" : "Pricelist Mobil & Supir Bali"}</h1>
+        <h1>{locale === "en" ? "Car Pricelist" : "Pricelist Mobil"}</h1>
         <p>
           {locale === "en"
             ? "All prices include clean AC private car, professional local driver, fuel, and parking fees."
