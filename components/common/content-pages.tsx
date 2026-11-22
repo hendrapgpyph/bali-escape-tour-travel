@@ -196,9 +196,15 @@ export function CarRentalPage({ locale }: { locale: Locale }) {
   return (
     <main className="inner-page">
       <div className="simple-banner">
-        <span className="eyebrow">BALI, AT YOUR OWN PACE</span>
-        <h1>{locale === "en" ? "Your island ride, sorted." : "Kendaraan untuk menjelajahi pulau."}</h1>
-        <p>{locale === "en" ? "Comfortable private rides, with a local touch." : "Perjalanan privat yang nyaman dengan sentuhan lokal."}</p>
+        <span className="eyebrow">
+          {locale === "en" ? "BALI PRIVATE CAR PRICELIST · ALL INCLUSIVE" : "PRICELIST MOBIL BALI · SUDAH TERMASUK SUPIR"}
+        </span>
+        <h1>{locale === "en" ? "Car Fleet & Daily Pricelist" : "Pricelist Mobil & Supir Bali"}</h1>
+        <p>
+          {locale === "en"
+            ? "All prices include clean AC private car, professional local driver, fuel, and parking fees."
+            : "Semua harga sudah termasuk mobil privat ber-AC, supir lokal berpengalaman, BBM, dan biaya parkir."}
+        </p>
       </div>
       <section className="section listing-section">
         <div className="car-grid">
@@ -220,12 +226,12 @@ export function CarRentalPage({ locale }: { locale: Locale }) {
                 </ul>
                 <div className="car-price">
                   <strong>{money(car.price)}</strong>
-                  <span>/{locale === "en" ? "day" : "hari"}</span>
+                  <span>/{locale === "en" ? "day (incl. driver)" : "hari (termasuk supir)"}</span>
                   <a
                     href={whatsappHref(
                       locale === "en"
-                        ? `Hello, I’d like to book ${text(car.title, locale)}.`
-                        : `Halo, saya ingin memesan ${text(car.title, locale)}.`
+                        ? `Hello, I’d like to book ${text(car.title, locale)} with driver.`
+                        : `Halo, saya ingin memesan sewa ${text(car.title, locale)} termasuk supir.`
                     )}
                     aria-label={`Book ${text(car.title, locale)}`}
                   >

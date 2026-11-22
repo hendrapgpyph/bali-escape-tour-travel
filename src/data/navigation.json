@@ -1,1 +1,69 @@
-{"items":[{"label":{"en":"Home","id":"Beranda"},"href":"/"},{"label":{"en":"Tour Packages","id":"Paket Tur"},"href":"/tours"},{"label":{"en":"Car Rental","id":"Sewa Mobil"},"href":"/car-rental"},{"label":{"en":"About Us","id":"Tentang Kami"},"href":"/about-us"},{"label":{"en":"Contact","id":"Kontak"},"href":"/contact"}]}
+{
+  "items": [
+    {
+      "label": {
+        "en": "Home",
+        "id": "Beranda"
+      },
+      "href": "/"
+    },
+    {
+      "label": {
+        "en": "Tour Packages",
+        "id": "Paket Tur"
+      },
+      "href": "/tours"
+    },
+    {
+      "label": {
+        "en": "Car Pricelist",
+        "id": "Pricelist Mobil"
+      },
+      "href": "/car-rental"
+    },
+    {
+      "label": {
+        "en": "Contact",
+        "id": "Kontak"
+      },
+      "href": "/contact"
+    }
+  ],
+  "footerItems": [
+    {
+      "label": {
+        "en": "Home",
+        "id": "Beranda"
+      },
+      "href": "/"
+    },
+    {
+      "label": {
+        "en": "Tour Packages",
+        "id": "Paket Tur"
+      },
+      "href": "/tours"
+    },
+    {
+      "label": {
+        "en": "Car Pricelist",
+        "id": "Pricelist Mobil"
+      },
+      "href": "/car-rental"
+    },
+    {
+      "label": {
+        "en": "About Us",
+        "id": "Tentang Kami"
+      },
+      "href": "/about-us"
+    },
+    {
+      "label": {
+        "en": "Contact",
+        "id": "Kontak"
+      },
+      "href": "/contact"
+    }
+  ]
+}

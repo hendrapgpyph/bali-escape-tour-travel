@@ -1,1 +1,132 @@
-{"home":{"eyebrow":{"en":"Your island story starts here","id":"Kisah pulau Anda dimulai di sini"},"heroLine1":{"en":"Let’s Explore","id":"Jelajahi Bali"},"heroLine2":{"en":"Bali Together!","id":"Bersama!"},"heroDescription":{"en":"Your trusted travel partner for an unforgettable Bali experience.","id":"Partner perjalanan tepercaya untuk pengalaman Bali yang tak terlupakan."},"browse":{"en":"Browse Tours","id":"Jelajahi Tur"},"popular":{"en":"Popular Tour Packages","id":"Paket Tur Populer"},"viewAll":{"en":"View all","id":"Lihat semua"},"why":{"en":"The Bali Escape difference","id":"Keistimewaan Bali Escape"},"whyText":{"en":"Small details, local knowledge, and a little more room to explore.","id":"Perhatian pada detail, wawasan lokal, dan lebih banyak ruang untuk menjelajah."},"reasons":[{"icon":"compass","title":{"en":"Local knowledge","id":"Wawasan lokal"},"text":{"en":"Thoughtful itineraries shaped by people who call Bali home.","id":"Rencana perjalanan dari mereka yang tinggal di Bali."}},{"icon":"car","title":{"en":"Easy, comfortable rides","id":"Perjalanan nyaman"},"text":{"en":"Private transport keeps your island days feeling effortless.","id":"Transportasi pribadi membuat perjalanan lebih mudah."}},{"icon":"heart","title":{"en":"Made for your pace","id":"Sesuai ritme Anda"},"text":{"en":"Flexible experiences with time to enjoy the little moments.","id":"Pengalaman fleksibel dengan waktu untuk menikmati setiap momen."}},{"icon":"message","title":{"en":"Here when you need us","id":"Siap membantu"},"text":{"en":"Friendly support before, during, and after your trip.","id":"Bantuan ramah sebelum, selama, dan setelah perjalanan."}}],"cars":{"en":"A better way to get around","id":"Cara nyaman menjelajahi Bali"},"cta":{"en":"Ready for your Bali adventure?","id":"Siap untuk petualangan Bali?"},"ctaText":{"en":"Let’s plan your unforgettable island experience.","id":"Mari rencanakan pengalaman pulau yang tak terlupakan."}},"about":{"title":{"en":"Rooted in Bali. Made for discovery.","id":"Berakar di Bali. Hadir untuk petualangan."},"intro":{"en":"Bali Escape is a local travel team helping curious travelers experience the island with a little more meaning and a lot less stress.","id":"Bali Escape adalah tim perjalanan lokal yang membantu Anda menikmati Bali dengan lebih bermakna dan tanpa repot."},"story":{"en":"We started with one simple idea: the best way to see Bali is with people who know it by heart. Today, we bring together local knowledge, considered itineraries, and genuine hospitality to make every journey feel personal.","id":"Kami memulai dengan satu gagasan sederhana: cara terbaik menjelajahi Bali adalah bersama orang yang mengenalnya. Kini, kami memadukan wawasan lokal, rencana perjalanan matang, dan keramahan tulus."}},"contact":{"title":{"en":"Let’s plan something wonderful","id":"Mari rencanakan perjalanan istimewa"},"text":{"en":"Tell us what you’re dreaming of and our local team will help you find your way.","id":"Ceritakan rencana Anda dan tim lokal kami siap membantu."}},"footer":{"description":{"en":"A little local insight makes a big island feel closer.","id":"Wawasan lokal membuat pulau yang luas terasa lebih dekat."},"copyright":{"en":"Made with care in Bali.","id":"Dibuat dengan sepenuh hati di Bali."}}}
+{
+  "home": {
+    "eyebrow": {
+      "en": "Your island story starts here",
+      "id": "Kisah pulau Anda dimulai di sini"
+    },
+    "heroLine1": {
+      "en": "Let’s Explore",
+      "id": "Jelajahi Bali"
+    },
+    "heroLine2": {
+      "en": "Bali Together!",
+      "id": "Bersama!"
+    },
+    "heroDescription": {
+      "en": "Your trusted travel partner for an unforgettable Bali experience.",
+      "id": "Partner perjalanan tepercaya untuk pengalaman Bali yang tak terlupakan."
+    },
+    "browse": {
+      "en": "Browse Tours",
+      "id": "Jelajahi Tur"
+    },
+    "popular": {
+      "en": "Popular Tour Packages",
+      "id": "Paket Tur Populer"
+    },
+    "viewAll": {
+      "en": "View all",
+      "id": "Lihat semua"
+    },
+    "why": {
+      "en": "The Bali Escape difference",
+      "id": "Keistimewaan Bali Escape"
+    },
+    "whyText": {
+      "en": "Small details, local knowledge, and a little more room to explore.",
+      "id": "Perhatian pada detail, wawasan lokal, dan lebih banyak ruang untuk menjelajah."
+    },
+    "reasons": [
+      {
+        "icon": "compass",
+        "title": {
+          "en": "Local knowledge",
+          "id": "Wawasan lokal"
+        },
+        "text": {
+          "en": "Thoughtful itineraries shaped by people who call Bali home.",
+          "id": "Rencana perjalanan dari mereka yang tinggal di Bali."
+        }
+      },
+      {
+        "icon": "car",
+        "title": {
+          "en": "Easy, comfortable rides",
+          "id": "Perjalanan nyaman"
+        },
+        "text": {
+          "en": "Private transport keeps your island days feeling effortless.",
+          "id": "Transportasi pribadi membuat perjalanan lebih mudah."
+        }
+      },
+      {
+        "icon": "heart",
+        "title": {
+          "en": "Made for your pace",
+          "id": "Sesuai ritme Anda"
+        },
+        "text": {
+          "en": "Flexible experiences with time to enjoy the little moments.",
+          "id": "Pengalaman fleksibel dengan waktu untuk menikmati setiap momen."
+        }
+      },
+      {
+        "icon": "message",
+        "title": {
+          "en": "Here when you need us",
+          "id": "Siap membantu"
+        },
+        "text": {
+          "en": "Friendly support before, during, and after your trip.",
+          "id": "Bantuan ramah sebelum, selama, dan setelah perjalanan."
+        }
+      }
+    ],
+    "cars": {
+      "en": "Car Fleet & Daily Pricelist (Driver Included)",
+      "id": "Pricelist Mobil & Supir (Sudah Termasuk BBM)"
+    },
+    "cta": {
+      "en": "Ready for your Bali adventure?",
+      "id": "Siap untuk petualangan Bali?"
+    },
+    "ctaText": {
+      "en": "Let’s plan your unforgettable island experience.",
+      "id": "Mari rencanakan pengalaman pulau yang tak terlupakan."
+    }
+  },
+  "about": {
+    "title": {
+      "en": "Rooted in Bali. Made for discovery.",
+      "id": "Berakar di Bali. Hadir untuk petualangan."
+    },
+    "intro": {
+      "en": "Bali Escape is a local travel team helping curious travelers experience the island with a little more meaning and a lot less stress.",
+      "id": "Bali Escape adalah tim perjalanan lokal yang membantu Anda menikmati Bali dengan lebih bermakna dan tanpa repot."
+    },
+    "story": {
+      "en": "We started with one simple idea: the best way to see Bali is with people who know it by heart. Today, we bring together local knowledge, considered itineraries, and genuine hospitality to make every journey feel personal.",
+      "id": "Kami memulai dengan satu gagasan sederhana: cara terbaik menjelajahi Bali adalah bersama orang yang mengenalnya. Kini, kami memadukan wawasan lokal, rencana perjalanan matang, dan keramahan tulus."
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "Let’s plan something wonderful",
+      "id": "Mari rencanakan perjalanan istimewa"
+    },
+    "text": {
+      "en": "Tell us what you’re dreaming of and our local team will help you find your way.",
+      "id": "Ceritakan rencana Anda dan tim lokal kami siap membantu."
+    }
+  },
+  "footer": {
+    "description": {
+      "en": "A little local insight makes a big island feel closer.",
+      "id": "Wawasan lokal membuat pulau yang luas terasa lebih dekat."
+    },
+    "copyright": {
+      "en": "Made with care in Bali.",
+      "id": "Dibuat dengan sepenuh hati di Bali."
+    }
+  }
+}

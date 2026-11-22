@@ -4,6 +4,42 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowRight, ArrowUp, CarFront, ChevronDown, Compass, Heart, Menu, MessageCircle, Palmtree, X } from "lucide-react";
+
+function InstagramIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
 import AOS from "aos";
 import "aos/dist/aos.css";
 import site from "@/src/data/site.json";
@@ -19,6 +55,7 @@ export type { Locale } from "@/lib/localization";
 
 export function SiteShell({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showTop, setShowTop] = useState(false);
   const pathname = usePathname();
@@ -32,17 +69,19 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
     pathname.includes("/tour/") ||
     (pathname.startsWith(`/${locale}/tours/`) && pathname.split("/").filter(Boolean).length > 2);
 
+  // Close any open menus immediately whenever route/pathname changes
   useEffect(() => {
-    // Delay AOS init slightly so React 19 finishes DOM hydration cleanly without attribute mismatches
-    const timer = setTimeout(() => {
-      AOS.init({
-        duration: 650,
-        once: true,
-        offset: 60,
-        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-      });
-      AOS.refresh();
-    }, 150);
+    setDropdownOpen(false);
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 550,
+      once: true,
+      offset: 50,
+      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    });
 
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -50,7 +89,6 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    // Check initial scroll on mount
     onScroll();
 
     const saved = window.localStorage.getItem("tour-travel-locale");
@@ -59,7 +97,6 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
     }
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("scroll", onScroll);
     };
   }, [locale, pathname, router]);
@@ -71,8 +108,13 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
   };
 
   const base = `/${locale}`;
+  // Navbar items (About Us is excluded from header navbar per user request)
   const labels = navData.items;
-  const paths = [base, `${base}/tours`, `${base}/car-rental`, `${base}/about-us`, `${base}/contact`];
+  const paths = [base, `${base}/tours`, `${base}/car-rental`, `${base}/contact`];
+
+  // Footer items (includes About Us for full site exploration)
+  const footerLabels = navData.footerItems || navData.items;
+  const footerPaths = footerLabels.map((item) => (item.href === "/" ? base : `${base}${item.href}`));
 
   return (
     <>
@@ -89,7 +131,7 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
         } ${menuOpen ? "menu-is-open" : ""}`}
       >
         <div className="nav-inner">
-          <Link className="brand" href={base}>
+          <Link className="brand" href={base} onClick={() => { setDropdownOpen(false); setMenuOpen(false); }}>
             <span className="brand-mark">
               <Palmtree size={29} />
             </span>
@@ -98,27 +140,56 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
               <small>Tours & Experiences</small>
             </span>
           </Link>
+
           <nav className="desktop-nav" aria-label="Main navigation">
-            <Link href={paths[0]}>{text(labels[0].label, locale)}</Link>
-            <div className="nav-dropdown">
-              <Link href={paths[1]}>
+            <Link href={paths[0]} onClick={() => setDropdownOpen(false)}>
+              {text(labels[0].label, locale)}
+            </Link>
+
+            {/* Tour Packages dropdown with instant-hide on click */}
+            <div
+              className={`nav-dropdown ${dropdownOpen ? "is-open" : ""}`}
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <Link
+                href={paths[1]}
+                onClick={() => {
+                  setDropdownOpen(false);
+                  setMenuOpen(false);
+                }}
+              >
                 {text(labels[1].label, locale)} <ChevronDown size={13} />
               </Link>
               <div className="dropdown-panel">
                 {categories.map((c) => (
-                  <Link key={c.id} href={categoryHref(locale, c.slug)}>
+                  <Link
+                    key={c.id}
+                    href={categoryHref(locale, c.slug)}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      setMenuOpen(false);
+                    }}
+                  >
                     {text(c.title, locale)}
                     <ArrowRight size={14} />
                   </Link>
                 ))}
               </div>
             </div>
+
+            {/* Car Pricelist & Contact */}
             {labels.slice(2).map((item, i) => (
-              <Link key={item.href} href={paths[i + 2]}>
+              <Link
+                key={item.href}
+                href={paths[i + 2]}
+                onClick={() => setDropdownOpen(false)}
+              >
                 {text(item.label, locale)}
               </Link>
             ))}
           </nav>
+
           <div className="nav-actions">
             <div className="language-switch">
               <button aria-label="English" className={locale === "en" ? "active" : ""} onClick={() => switchLocale("en")}>
@@ -141,16 +212,31 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
             </button>
           </div>
         </div>
+
         {menuOpen && (
           <nav className="mobile-nav" aria-label="Mobile navigation">
             {labels.map((item, i) => (
-              <Link key={item.href} onClick={() => setMenuOpen(false)} href={paths[i]}>
+              <Link
+                key={item.href}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setDropdownOpen(false);
+                }}
+                href={paths[i]}
+              >
                 {text(item.label, locale)}
               </Link>
             ))}
             <div className="mobile-subnav">
               {categories.map((c) => (
-                <Link key={c.id} onClick={() => setMenuOpen(false)} href={categoryHref(locale, c.slug)}>
+                <Link
+                  key={c.id}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setDropdownOpen(false);
+                  }}
+                  href={categoryHref(locale, c.slug)}
+                >
                   {text(c.title, locale)}
                 </Link>
               ))}
@@ -181,8 +267,8 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
           </div>
           <div>
             <h3>{locale === "en" ? "Explore" : "Jelajahi"}</h3>
-            {labels.map((item, i) => (
-              <Link key={item.href} href={paths[i]}>
+            {footerLabels.map((item, i) => (
+              <Link key={item.href} href={footerPaths[i]}>
                 {text(item.label, locale)}
               </Link>
             ))}
@@ -200,9 +286,27 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <p>{site.address}</p>
             <a href={whatsappHref(locale === "en" ? "Hello!" : "Halo!")}>WhatsApp</a>
+
+            {/* Social Links with Beautiful Modern Icons */}
             <div className="social-links">
-              <a href={site.social.instagram}>Instagram</a>
-              <a href={site.social.facebook}>Facebook</a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="social-icon-btn"
+              >
+                <InstagramIcon size={18} />
+              </a>
+              <a
+                href={site.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="social-icon-btn"
+              >
+                <FacebookIcon size={18} />
+              </a>
             </div>
           </div>
         </div>

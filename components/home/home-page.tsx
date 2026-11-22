@@ -44,7 +44,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
           backgroundImage: `linear-gradient(90deg, rgba(5, 42, 61, 0.62) 0%, rgba(5, 42, 61, 0.15) 75%), url('${site.heroImage}')`,
         }}
       >
-        <div className="hero-content" data-aos="fade-right" suppressHydrationWarning>
+        <div className="hero-content hero-fade-in" suppressHydrationWarning>
           <span className="hero-kicker">
             <Sparkles size={14} />
             {text(copy.eyebrow, locale)}
@@ -77,7 +77,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Floating Trust & Highlights Bar bridging Hero and Tour Grid */}
-      <div className="hero-highlights-wrapper" data-aos="fade-up" data-aos-delay={50} suppressHydrationWarning>
+      <div className="hero-highlights-wrapper hero-fade-in-up" suppressHydrationWarning>
         <div className="hero-highlights-strip">
           {trustHighlights.map((item, idx) => {
             const Icon = item.icon;
@@ -175,12 +175,15 @@ export default function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* Car Rental Section */}
+      {/* Car Rental / Pricelist Section */}
       <section className="section cars-section">
         <div className="section-head">
-          <SectionTitle eyebrow={locale === "en" ? "YOUR ISLAND RIDE" : "KENDARAAN PULAU ANDA"} title={text(copy.cars, locale)} />
+          <SectionTitle
+            eyebrow={locale === "en" ? "ALL-INCLUSIVE FLEET & PRICELIST" : "PRICELIST LENGKAP & SUPIR"}
+            title={text(copy.cars, locale)}
+          />
           <Link className="text-link" href={`/${locale}/car-rental`}>
-            {locale === "en" ? "View all cars" : "Lihat semua mobil"}
+            {locale === "en" ? "View car pricelist" : "Lihat semua pricelist"}
             <ArrowRight size={15} />
           </Link>
         </div>
@@ -191,7 +194,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 <LazyImage src={car.image} alt={text(car.title, locale)} />
                 <span className="car-tag">
                   <Clock3 size={12} />
-                  {locale === "en" ? "PRIVATE RIDE" : "KENDARAAN PRIVAT"}
+                  {locale === "en" ? "INCL. DRIVER & FUEL" : "TERMASUK DRIVER & BBM"}
                 </span>
               </div>
               <div className="car-info">
@@ -199,12 +202,12 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 <p>{text(car.description, locale)}</p>
                 <div className="car-price">
                   <strong>{money(car.price)}</strong>
-                  <span>/{locale === "en" ? "day" : "hari"}</span>
+                  <span>/{locale === "en" ? "day (incl. driver)" : "hari (termasuk supir)"}</span>
                   <a
                     href={whatsappHref(
                       locale === "en"
-                        ? `Hello, I’m interested in the ${text(car.title, locale)}.`
-                        : `Halo, saya tertarik dengan ${text(car.title, locale)}.`
+                        ? `Hello, I’m interested in renting the ${text(car.title, locale)} with private driver.`
+                        : `Halo, saya tertarik dengan ${text(car.title, locale)} lengkap dengan supir.`
                     )}
                     aria-label={`Book ${text(car.title, locale)}`}
                   >
