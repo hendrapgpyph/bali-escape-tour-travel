@@ -56,6 +56,7 @@ export type { Locale } from "@/lib/localization";
 export function SiteShell({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileTourOpen, setMobileTourOpen] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [showTop, setShowTop] = useState(false);
   const pathname = usePathname();
@@ -215,32 +216,67 @@ export function SiteShell({ children, locale }: { children: React.ReactNode; loc
 
         {menuOpen && (
           <nav className="mobile-nav" aria-label="Mobile navigation">
-            {labels.map((item, i) => (
-              <Link
-                key={item.href}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setDropdownOpen(false);
-                }}
-                href={paths[i]}
-              >
-                {text(item.label, locale)}
-              </Link>
-            ))}
-            <div className="mobile-subnav">
-              {categories.map((c) => (
+            {labels.map((item, i) => {
+              const isTourPackages = item.href === "/tours";
+              if (isTourPackages) {
+                return (
+                  <div key={item.href} className="mobile-nav-group">
+                    <div className="mobile-nav-item-with-sub">
+                      <Link
+                        onClick={() => {
+                          setMenuOpen(false);
+                          setDropdownOpen(false);
+                        }}
+                        href={paths[i]}
+                      >
+                        {text(item.label, locale)}
+                      </Link>
+                      <button
+                        type="button"
+                        className={`mobile-sub-toggle ${mobileTourOpen ? "is-open" : ""}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setMobileTourOpen(!mobileTourOpen);
+                        }}
+                        aria-label={mobileTourOpen ? "Collapse submenu" : "Expand submenu"}
+                      >
+                        <ChevronDown size={17} />
+                      </button>
+                    </div>
+                    {mobileTourOpen && (
+                      <div className="mobile-subnav">
+                        {categories.map((c) => (
+                          <Link
+                            key={c.id}
+                            onClick={() => {
+                              setMenuOpen(false);
+                              setDropdownOpen(false);
+                            }}
+                            href={categoryHref(locale, c.slug)}
+                          >
+                            <span>{text(c.title, locale)}</span>
+                            <ArrowRight size={13} />
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
                 <Link
-                  key={c.id}
+                  key={item.href}
                   onClick={() => {
                     setMenuOpen(false);
                     setDropdownOpen(false);
                   }}
-                  href={categoryHref(locale, c.slug)}
+                  href={paths[i]}
                 >
-                  {text(c.title, locale)}
+                  {text(item.label, locale)}
                 </Link>
-              ))}
-            </div>
+              );
+            })}
             <div className="mobile-languages">
               <button onClick={() => switchLocale("en")}>English</button>
               <button onClick={() => switchLocale("id")}>Bahasa Indonesia</button>
