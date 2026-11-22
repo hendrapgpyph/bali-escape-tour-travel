@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Clock3, Compass, HeartHandshake, MoveUpRight, Palmtree, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { ArrowRight, ChevronDown, Clock3, Compass, HeartHandshake, MoveUpRight, Palmtree, ShieldCheck, Sparkles, Star } from "lucide-react";
 import categories from "@/src/data/tour-categories.json";
 import cars from "@/src/data/cars.json";
 import pages from "@/src/data/pages.json";
@@ -74,10 +74,22 @@ export default function HomePage({ locale }: { locale: Locale }) {
           <i />
         </div>
         <div className="hero-bottom-label">BALI · INDONESIA</div>
+
+        {/* Animated Scroll Indicator at Center Bottom */}
+        <a
+          href="#highlights"
+          className="hero-scroll-indicator"
+          aria-label="Scroll down to explore"
+        >
+          <span className="scroll-text">SCROLL</span>
+          <div className="scroll-arrow-wrap">
+            <ChevronDown size={17} className="scroll-arrow-icon" />
+          </div>
+        </a>
       </section>
 
       {/* Floating Trust & Highlights Bar bridging Hero and Tour Grid */}
-      <div className="hero-highlights-wrapper hero-fade-in-up" suppressHydrationWarning>
+      <div id="highlights" className="hero-highlights-wrapper hero-fade-in-up" suppressHydrationWarning>
         <div className="hero-highlights-strip">
           {trustHighlights.map((item, idx) => {
             const Icon = item.icon;
