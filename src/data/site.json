@@ -1,1 +1,25 @@
-{"name":"Bali Escape","tagline":"Tours & Experiences","whatsapp":"0000000000000","email":"hello@example.com","address":"Your Bali office address here","mapEmbedUrl":"","favicon":"/icon.svg","social":{"instagram":"https://instagram.com/","facebook":"https://facebook.com/"},"defaultLanguage":"en","languages":["en","id"],"heroImage":"/images/hero-bali.png","ctaImage":"https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=85","seo":{"title":"Bali Escape — Tours & Experiences","description":"Explore Bali with local experts. Discover unforgettable tours, island adventures and private car rentals."}}
+{
+  "name": "Bali Escape",
+  "siteUrl": "https://baliescape.com",
+  "tagline": "Tours & Experiences",
+  "whatsapp": "0000000000000",
+  "email": "hello@example.com",
+  "address": "Jl. Raya Seminyak No. 88, Badung, Bali 80361, Indonesia",
+  "mapEmbedUrl": "",
+  "favicon": "/icon.svg",
+  "social": {
+    "instagram": "https://instagram.com/",
+    "facebook": "https://facebook.com/"
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en",
+    "id"
+  ],
+  "heroImage": "/images/hero-bali.png",
+  "ctaImage": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=85",
+  "seo": {
+    "title": "Bali Escape — Tours & Experiences",
+    "description": "Explore Bali with local experts. Discover unforgettable curated day tours, island adventures, and private car rental with driver."
+  }
+}
